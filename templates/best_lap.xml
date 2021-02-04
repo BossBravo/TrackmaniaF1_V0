@@ -1,0 +1,13 @@
+<frame pos="-67.5 80" z-index="-30">
+  <quad pos="0 0" z-index="-1" size="10 10" bgcolor="B2D"/>
+  <quad pos="0 0" z-index="0" size="10 10" style="UIConstruction_Buttons" substyle="AuthorTime" autoscale="0" />
+  
+  <quad pos="10 0" z-index="-1" size="45 10" bgcolor="000000"/>
+  <label posn="15 -3.5 0" size="45 10" text="$B2DFASTEST LAP" style="TrackerTextBig" textsize="2"/>
+  
+  <quad pos="55 0" z-index="-1" size="80 10" bgcolor="000A"/>
+  <label posn="58 -4 0" size="40 10" text="{{ best_lap_login }}" style="TrackerTextBig" textsize="1"/>
+  <label posn="135 -2.5 0" size="80 10" text="{{ best_lap_time }}" style="TrackerTextBig" textsize="4" halign="right"/>
+</frame>
+
+<audio play="1" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/best_lap.ogg"/>

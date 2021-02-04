@@ -1,0 +1,3 @@
+<label posn="0 -86.6 99" size="70 7" halign="center" valign="center" text="$s$111{{ percent }}%     {{ km }}km" style="TextValueSmallSm"/>
+<gauge posn="0 -87 98" sizen="70 7" halign="center" valign="center" drawblockbg="0" ratio="{{ ratio }}" centered="0" drawbg="0" color="{{ color }}" style="ProgressBar"/>
+<quad posn="0 -87 97" sizen="70 7" halign="center" valign="center" style="Bgs1InRace" substyle="ProgressBar" bgcolor="000f" color="000f" />

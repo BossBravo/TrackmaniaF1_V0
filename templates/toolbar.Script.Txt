@@ -1,0 +1,36 @@
+
+#Include "TextLib" as TL
+#Include "AnimLib" as AL
+
+main() {
+  declare Toolbar_Tooltip_Quad <=> (Page.GetFirstChild("race_control_toolbar_bar_tooltip_quad") as CMlQuad);
+  declare Toolbar_Tooltip_Label <=> (Page.GetFirstChild("race_control_toolbar_bar_tooltip_text") as CMlLabel);
+
+  declare Text[Text] Tooltips = [
+    "race_control_toolbar_bar_yellow_flag" => "Yellow Flag",
+    "race_control_toolbar_bar_red_flag" => "Red Flag",
+    "race_control_toolbar_bar_black_flag" => "Penalty",
+    "race_control_toolbar_bar_safety_car" => "Safety Car",
+    "race_control_toolbar_bar_start_procedure" => "Start Procedure",
+    "race_control_toolbar_bar_set_cache" => "Cache Mode",
+    "race_control_toolbar_bar_meteo" => "Météo",
+    "race_control_toolbar_bar_checklist" => "Checklist",
+    "race_control_toolbar_bar_maplist" => "Map List"
+  ];
+
+
+  while(True) {
+    foreach (Event in PendingEvents) {
+      if (Event.Type == CMlEvent::Type::MouseOver && TL::Find("race_control_toolbar_bar", Event.ControlId, True, True)) {
+        Toolbar_Tooltip_Label.SetText(Tooltips[Event.ControlId]);
+        Toolbar_Tooltip_Label.Show();
+        Toolbar_Tooltip_Quad.Show();
+      }
+      if (Event.Type == CMlEvent::Type::MouseOut && TL::Find("race_control_toolbar_bar", Event.ControlId, True, True)) {
+        Toolbar_Tooltip_Label.Hide();
+        Toolbar_Tooltip_Quad.Hide();
+      }
+    }
+    yield;
+  }
+}

@@ -1,0 +1,31 @@
+<quad pos="-150 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/green_flag.jpg" autoscale="0" halign="center" valign="center"/>
+<quad pos="-150 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/yellow_flag.jpg" autoscale="0" halign="center" valign="center"/>
+<quad pos="-120 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/red_flag.jpg" autoscale="0" halign="center" valign="center"/>
+<quad pos="-90 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/black_flag.jpg" autoscale="0" halign="center" valign="center"/>
+<quad pos="-60 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/final_flag.jpg" autoscale="0" halign="center" valign="center"/>
+<quad pos="-30 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/safety_car_flag.jpg" autoscale="0" halign="center" valign="center"/>
+<quad pos="-30 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/meteo.png" autoscale="0" halign="center" valign="center"/>
+<quad pos="-30 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/sun.png" autoscale="0" halign="center" valign="center"/>
+<quad pos="-30 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/clouds.png" autoscale="0" halign="center" valign="center"/>
+<quad pos="-30 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/snowflake.png" autoscale="0" halign="center" valign="center"/>
+<quad pos="-30 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/fog.png" autoscale="0" halign="center" valign="center"/>
+<quad pos="-30 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/rain.png" autoscale="0" halign="center" valign="center"/>
+<quad pos="-30 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/background_rain.webm" autoscale="0" halign="center" valign="center"/>
+<quad pos="-30 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/background_fog.png" autoscale="0" halign="center" valign="center"/>
+<quad pos="-30 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/background_clouds.webm" autoscale="0" halign="center" valign="center"/>
+<quad pos="-30 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/background_snowflake.webm" autoscale="0" halign="center" valign="center"/>
+<quad pos="-30 -400" z-index="99" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/background_sun.webm" autoscale="0" halign="center" valign="center"/>
+<audio play="0" looping="0" data="http://www.lerangetout.net/mp/stadium/theme_f1_coutdown.ogg"/>
+<audio play="0" looping="0" data="http://www.lerangetout.net/mp/stadium/theme_f1_coutdown_5min.ogg"/>
+<audio play="0" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/box_box_box.ogg"/>
+<audio play="0" looping="0" data="http://www.lerangetout.net/tm/AlerteNascar.ogg"/>
+<audio play="0" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/go_go_go.ogg"/>
+<audio play="0" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/GreenFlag.ogg"/>
+<audio play="0" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/Penalty.ogg"/>
+<audio play="0" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/SafetyCar_DoNotOvertake.ogg"/>
+<audio play="0" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/SafetyCar_OvertakeOK.ogg"/>
+<audio play="0" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/SafetyCar_StayBehindNoOvertake.ogg"/>
+<audio play="0" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/SafetyCar_OffThisLap.ogg"/>
+<audio play="0" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/YellowFlag_DoNotOvertake.ogg"/>
+<audio play="0" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/podium_song.ogg"/>
+<audio play="0" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/best_lap.ogg"/>

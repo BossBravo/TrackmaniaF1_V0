@@ -1,0 +1,37 @@
+{% block before %}{% endblock %}
+<frame pos="{{ widget_x }} {{ widget_y }}" z-index="-10" class="{% if distraction_hide %}distraction-hide{% else %}{% endif %}">
+  {% block title %}
+    {% if title %}
+      <quad pos="0 0" z-index="0" size="{{ size_x }} 6" bgcolor="00000099"/>
+      <label pos="17 -3" z-index="1" size="{{ size_x }} 6" text="{{ title }}" textfont="RajdhaniMono" textsize="2.0" textemboss="1" halign="center" valign="center2"/>
+    {% endif %}
+  {% endblock %}
+
+  <frame pos="0 {% if title %}-6.5{% else %}0{% endif %}">
+  {% if times != None %}
+    {% for time in times %}
+      <frame pos="{{ time.column_pos }} -{{ time.line_pos }}">
+        <quad pos="0 0" z-index="0" size="2.5 3" bgcolor="fff"/>
+        <label pos="1.25 -1.5" z-index="1" size="2.5 3" text="$000{{ time.index }}" textsize="0.3" textfont="RajdhaniMono"  textemboss="1" halign="center" valign="center2"/>
+        
+        <quad pos="2.75 0" z-index="0" size="20.5 3" bgcolor="000000a0"/>
+        <label pos="3 -1.5" z-index="1" size="20 3" text="{{ time.nickname }}" textsize="0.2" textfont="RajdhaniMono"  textemboss="1" halign="left" valign="center2"/>
+        
+        <quad pos="23.5 0" z-index="0" size="2 3" bgcolor="000000a0"/>
+        <label pos="23.75 -1.5" z-index="1" size="1.5 3" text="{{ time.nb_times_pitstop }}" textsize="0.2" textfont="RajdhaniMono" textemboss="1" halign="left" valign="center2"/>
+        
+        <!--<quad pos="23.5 0" z-index="0" size="12 3" bgcolor="ffffff"/>-->
+        <quad pos="25.5 0" z-index="0" size="{{ time.ratio2 }} 3" bgcolor="{{ time.color }}"/>
+        <label pos="28.5 -1.25" z-index="1" size="6 3" halign="center" valign="center" text="$s$111{{ time.gauge_percent }}%" textsize="0.2" textfont="RajdhaniMono" textemboss="1"/>
+        <!--<gauge pos="29 -1.5" z-index="1" size="14 3" halign="center" valign="center" drawblockbg="0" ratio="{{ time.ratio }}" centered="0" drawbg="0" color="{{ time.color }}" style="ProgressBar"/>
+        <quad pos="29 -1.5" z-index="1" size="14 3" halign="center" valign="center" style="Bgs1InRace" substyle="ProgressBar" bgcolor="000f" color="000f" />-->
+      </frame>
+    {% endfor %}
+  {% endif %}
+  </frame>
+</frame>
+{% block after %}{% endblock %}
+
+{% block maniascript %}
+  <script><!-- {% include 'formula1/live_rankings.Script.Txt' %} --></script>
+{% endblock %}

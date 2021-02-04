@@ -1,0 +1,20 @@
+<frame pos="82 -83" z-index="60" id="race_control_toolbar_bar_frame">
+  <quad pos="0 0" z-index="0" size="50.5 6" bgcolor="00000060"/>
+
+  <!-- Tooltip -->
+  <quad pos="0 4" z-index="0" size="50.5 4" bgcolor="00000040" hidden="1" id="race_control_toolbar_bar_tooltip_quad"/>
+  <label pos="22.5 2.25" z-index="1" size="50.5 4" text="$fffTooltip" halign="center" valign="center" id="race_control_toolbar_bar_tooltip_text" textsize="0.9" hidden="1"/>
+
+  <!-- Bar 1 Icons -->
+  <quad pos="3 -3" z-index="1" size="5 5" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/yellow_flag.jpg" id="race_control_toolbar_bar_yellow_flag" autoscale="0"  halign="center" valign="center" scriptevents="1" action="{{ id }}__bar_yellow_flag"/>
+  <quad pos="8.5 -3" z-index="1" size="5 5" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/red_flag.jpg" id="race_control_toolbar_bar_red_flag" autoscale="0"  halign="center" valign="center" scriptevents="1" action="{{ id }}__bar_red_flag"/>
+  <quad pos="14 -3" z-index="1" size="5 5" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/black_flag.jpg" id="race_control_toolbar_bar_black_flag" autoscale="0"  halign="center" valign="center" scriptevents="1" action="{{ id }}__bar_black_flag"/>
+  <quad pos="19.5 -3" z-index="1" size="5 5" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/safety_car_flag.jpg" id="race_control_toolbar_bar_safety_car" autoscale="0"  halign="center" valign="center" scriptevents="1" action="{{ id }}__bar_safety_car"/>
+  <quad pos="25 -3" z-index="1" size="5 5" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/start_procedure.jpg" id="race_control_toolbar_bar_start_procedure" autoscale="0"  halign="center" valign="center" scriptevents="1" action="{{ id }}__bar_start_procedure"/>
+  <quad pos="30.5 -3" z-index="1" size="5 5" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/cache.jpg" id="race_control_toolbar_bar_set_cache" autoscale="0"  halign="center" valign="center" scriptevents="1" action="{{ id }}__bar_set_cache"/>
+  <quad pos="36 -3" z-index="1" size="5 5" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/meteo.png" id="race_control_toolbar_bar_meteo" autoscale="0"  halign="center" valign="center" scriptevents="1" action="{{ id }}__bar_meteo"/>
+  <quad pos="41.5 -3" z-index="1" size="5 5" style="Icons128x128_1" substyle="Race" id="race_control_toolbar_bar_checklist" autoscale="0"  halign="center" valign="center" scriptevents="1" action="{{ id }}__bar_checklist"/>
+  <quad pos="47 -3.5" z-index="1" size="5 5" style="Icons128x128_1" substyle="Browse" id="race_control_toolbar_bar_maplist" autoscale="0"  halign="center" valign="center" scriptevents="1" action="{{ id }}__bar_maplist"/>
+</frame>
+
+<script><!-- {% include 'formula1/toolbar.Script.Txt' %} --></script>

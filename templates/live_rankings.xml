@@ -1,0 +1,82 @@
+{% block before %}{% endblock %}
+<frame pos="{{ widget_x }} {{ widget_y }}"  z-index="-50" class="{% if distraction_hide %}distraction-hide{% else %}{% endif %}">
+  {% block title %}
+    {% if title %}
+      <quad pos="0 0" z-index="0" size="{{ size_x }} 6" bgcolor="00000099"/>
+      <label pos="18.25 -2.5" z-index="1" size="{{ size_x }} 6" text="{{ title }}" textfont="RajdhaniMono" textsize="2.0" textemboss="1" halign="center" valign="center"/>
+    {% endif %}
+  {% endblock %}
+
+  <frame pos="0 {% if title %}-6.5{% else %}0{% endif %}">
+  {% if times != None %}
+    {% for time in times %}
+      <frame pos="0 -{{ (loop.index0 * 3.25) }}">
+        {% if time.login == time.BestLapLogin %}
+          <quad pos="0 0" z-index="0" size="3 3" bgcolor="c111c1"/>
+          <label pos="1.5 -1" z-index="1" size="3 3" text="$fff{{ time.index }}" textsize="1" textfont="RajdhaniMono"  textemboss="1" halign="center" valign="center"/>
+        {% else %}
+          <quad pos="0 0" z-index="0" size="3 3" bgcolor="fff"/>
+          <label pos="1.5 -1" z-index="1" size="3 3" text="$000{{ time.index }}" textsize="1" textfont="RajdhaniMono"  textemboss="1" halign="center" valign="center"/>
+        {% endif %}
+        <quad pos="3.5 0" z-index="0" size="22 3" bgcolor="{{ time.bgcolor }}"/>
+        {% if time.show_extra_infos != None and time.show_extra_infos == 1 %}
+          <label pos="4 -1" z-index="1" size="21 3" text="{{ time.nickname }}" textsize="1" textfont="RajdhaniMono"  textemboss="1" halign="left" valign="center" style="TextCardSmall" action="pyplanet__widgets_currentcps__spec_{{ time.login }}"/>
+        {% else %}
+          <label pos="4 -1" z-index="1" size="21 3" text="{{ time.nickname }}" textsize="1" textfont="RajdhaniMono"  textemboss="1" halign="left" valign="center" style="TextCardSmall"/>
+        {% endif %}
+        <quad pos="26 0" z-index="0" size="12 3" bgcolor="{{ time.bgcolor }}"/>
+        <label pos="32 -1" z-index="1" size="12 3" text="{{ time.color }}{{ time.score }}" textsize="1" textfont="RajdhaniMono"  textemboss="1" halign="center" valign="center"/>
+        {% if time.cp_difference != None and time.cp_difference != 0 %}
+          <quad pos="38.5 0" z-index="0" size="10 3" bgcolor="{{ time.bgcolor }}"/>
+          <label pos="43.5 -1" size="10 3" z-index="1" textsize="1" halign="center" valign="center" text="$fff+{{ time.cp_difference }} {{ time.cp_difference_unit }}" textfont="RajdhaniMono"  textemboss="1"/>
+        {% else %}
+          <quad pos="38.5 0" z-index="0" size="10 3" bgcolor="{{ time.bgcolor }}"/>
+          <label pos="43.5 -1" size="10 3" z-index="1" textsize="1" halign="center" valign="center" text="$fffLeader" textfont="RajdhaniMono"  textemboss="1"/>
+        {% endif %}
+        {% if time.show_extra_infos != None and time.show_extra_infos == 1 %}
+          <quad pos="48.75 0" z-index="0" size="2 3" bgcolor="000000a0"/>
+          <label pos="49 -1.5" z-index="1" size="1.5 3" text="{{ time.nb_times_pitstop }}" textsize="0.2" textfont="RajdhaniMono" textemboss="1" halign="left" valign="center2"/>
+          <quad pos="50.75 0" z-index="0" size="{{ time.gauge_ratio2 }} 3" bgcolor="{{ time.gauge_color }}"/>
+          <label pos="53.75 -1.25" z-index="1" size="6 3" halign="center" valign="center" text="$s$111{{ time.gauge_percent }}%" textsize="0.2" textfont="RajdhaniMono" textemboss="1"/>
+          {% if time.PitStop != None and time.PitStop == 1 %}
+            <label pos="64.75 -1.25" size="3.5 3" z-index="1" textsize="1" halign="center" valign="center" text="$f00PIT" textfont="RajdhaniMono"  textemboss="1"/>
+          {% else %}
+            {% if time.hasPenalty != None and time.hasPenalty == 1 %}
+              <quad pos="64.5 -1.5" z-index="1" size="3 3" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/black_flag.jpg" autoscale="0" halign="center" valign="center"/>
+            {% else %}
+              {% if time.PilotGiveUp != None and time.PilotGiveUp == 1 %}
+                <label pos="64.75 -1.25" size="3.5 3" z-index="1" textsize="1" halign="center" valign="center" text="$f00OUT" textfont="RajdhaniMono"  textemboss="1"/>
+              {% else %}
+                {% if time.PilotFinished != None and time.PilotFinished == 1 %}
+                  <quad pos="64.5 -1.5" z-index="1" size="3 3" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/final_flag.jpg" autoscale="0" halign="center" valign="center"/>
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        {% else %}
+          {% if time.PitStop != None and time.PitStop == 1 %}
+            <label pos="50.75 -1.25" size="3.5 3" z-index="1" textsize="1" halign="center" valign="center" text="$f00PIT" textfont="RajdhaniMono"  textemboss="1"/>
+          {% else %}
+            {% if time.hasPenalty != None and time.hasPenalty == 1 %}
+              <quad pos="50.5 -1.5" z-index="1" size="3 3" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/black_flag.jpg" autoscale="0" halign="center" valign="center"/>
+            {% else %}
+              {% if time.PilotFinished != None and time.PilotFinished == 1 %}
+                <quad pos="50.5 -1.5" z-index="1" size="3 3" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/final_flag.jpg" autoscale="0" halign="center" valign="center"/>
+              {% else %}
+                {% if time.PilotGiveUp != None and time.PilotGiveUp == 1 %}
+                  <label pos="50.75 -1.25" size="3.5 3" z-index="1" textsize="1" halign="center" valign="center" text="$f00OUT" textfont="RajdhaniMono"  textemboss="1"/>
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      </frame>
+    {% endfor %}
+  {% endif %}
+  </frame>
+</frame>
+{% block after %}{% endblock %}
+
+{% block maniascript %}
+  <script><!-- {% include 'formula1/live_rankings.Script.Txt' %} --></script>
+{% endblock %}

@@ -1,0 +1,2 @@
+<quad pos="0 0" z-index="99" size="400 400" autoscale="0" halign="center" valign="center" style="Bgs1InRace" substyle="BgButton"/>
+<label posn="0 0 100" size="1000 30" halign="center" valign="center" text="$sFuel empty !" style="TextValueBig"/>

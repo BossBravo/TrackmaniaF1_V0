@@ -1,0 +1,7 @@
+<quad pos="-85 59" z-index="-60" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/{{ flag_name }}.jpg" autoscale="0" halign="center" valign="center"/>
+<label posn="0 58 -60" size="100 30" halign="center" valign="center" text="{{ text_1 }}" style="TextValueBig"/>
+<label posn="0 48 -60" size="100 30" halign="center" valign="center" text="{{ text_2 }}" style="TextValueBig"/>
+<quad pos="85 59" z-index="-60" size="30 30" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/{{ flag_name }}.jpg" autoscale="0" halign="center" valign="center"/>
+{% if flag_sound_active == 1 %}
+  <audio play="1" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/{{ flag_sound }}.ogg"/>
+{% endif %}

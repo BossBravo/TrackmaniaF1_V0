@@ -1,0 +1,24 @@
+{% if isFinishLine == True %}    
+    <quad pos="-11 35.5" z-index="0" size="20 4" bgcolor="00000060" halign="center" valign="center"/>
+    <label pos="-11 35.5" z-index="1" size="20 4" textsize="0.8" text="$fff{{ lap_time }}" halign="center" valign="center"/>
+    {% if showGap == True %}
+        <quad pos="11 35.5" z-index="0" size="20 4" bgcolor="{{ lap_color }}" halign="center" valign="center"/>
+        <label pos="11 35.5" z-index="1" size="20 4" textsize="0.8" text="$fff{{ lap_gap }}" halign="center" valign="center"/>
+    {% endif %}
+{% else %}
+    <quad pos="-11 35.5" z-index="0" size="20 4" bgcolor="00000060" halign="center" valign="center"/>
+    <label pos="-11 35.5" z-index="1" size="20 4" textsize="0.8" text="$fff{{ checkpoint_time }}" halign="center" valign="center"/>
+    {% if showGap == True %}
+        <quad pos="11 35.5" z-index="0" size="20 4" bgcolor="{{ checkpoint_color }}" halign="center" valign="center"/>
+        <label pos="11 35.5" z-index="1" size="20 4" textsize="0.8" text="$fff{{ checkpoint_gap }}" halign="center" valign="center"/>
+    {% endif %}
+{% endif %}
+{% if isMapRecord == True %}
+    <quad pos="0 40" z-index="0" size="30 4" bgcolor="ff00ffa0" halign="center" valign="center"/>
+    <label pos="0 40" z-index="1" size="30 4" textsize="0.8" text="$fffNew Map Record" halign="center" valign="center"/>
+{% else %}
+    {% if isLapRecord == True %}
+        <quad pos="0 40" z-index="0" size="30 4" bgcolor="00ff00a0" halign="center" valign="center"/>
+        <label pos="0 40" z-index="1" size="30 4" textsize="0.8" text="$fffNew Lap Record" halign="center" valign="center"/>
+    {% endif %}
+{% endif %}

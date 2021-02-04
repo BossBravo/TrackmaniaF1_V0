@@ -1,0 +1,12 @@
+{% if meteo_image == 1 %}
+    <quad pos="0 0" z-index="70" size="340 180" image="http://ftp.boss-bravo.fr/trackmania/images/formula1/{{ meteo_name }}" autoscale="0" halign="center" valign="center"/>
+{% endif %}
+{% if meteo_video == 1 %}
+    <video pos="0 0" z-index="70" size="340 180" data="http://ftp.boss-bravo.fr/trackmania/images/formula1/{{ meteo_name }}" play="1" halign="center" valign="center"/>
+{% endif %}
+{% if grey_background == 1 %}
+    <quad pos="0 0" z-index="71" size="340 180" bgcolor="{{ grey_background_color_value }}" halign="center" valign="center"/>
+{% endif %}
+{% if meteo_sound_active == 1 %}
+  <audio play="1" looping="0" data="http://ftp.boss-bravo.fr/trackmania/music/formula1/{{ meteo_sound }}.ogg"/>
+{% endif %}
